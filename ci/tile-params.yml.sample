@@ -1,0 +1,44 @@
+pivnet_token:  # [R] PivNet Access Token
+git_url: git@github.com:msegvich/pcf-tiles-pipelines.git # [R] Pipelines github repo
+git_branch: master
+git_token:  # [R] Your github token
+git_username:  # [R] Your github username
+
+iaas_type: google-kvm                                       # azure-hyperv|vsphere-esxi|aws-xen-hvm|openstack-kvm|vcloud-esxi|google-kvm
+#stemcell_type: trusty                                         # xenial|trusty
+
+debug: true                                                  # Set to true if you want to see all the tasks output. This will also show all the secrets and certs, so think twice
+
+opsman_domain_or_ip_address: opsman.srt-v2-pas.pcf-labs.com # [R] Ops Manager FQDN, ex: opsmgr.example.com
+opsman_admin_username: admin # [R] Ops Manager admin user
+opsman_admin_password:  # [R] Ops Manager admin password
+opsman_client_id:
+opsman_client_secret:
+
+product_name: #elastic-runtime
+product_identifier: #cf
+product_slug: #elastic-runtime
+product_globs: #"srt*.pivotal"
+product_version_regex: #^2\.2\..*$
+
+enable_errands: true
+apply_changes_config:
+
+# Example for apply_changes_config
+#apply_changes_config: |
+#  deploy_products: ["cf"]
+#  errands:
+#    cf:
+#      run_post_deploy:
+#        smoke_tests: true
+#        push-usage-service: true
+#        push-apps-manager: true
+#        deploy-notifications: true
+#        deploy-notifications-ui: true
+#        deploy-autoscaler: true
+#        test-autoscaling: true
+#        nfsbrokerpush: true
+#        delete-pivotal-account: true
+#  ignore_warnings: true
+
+git_private_key:
