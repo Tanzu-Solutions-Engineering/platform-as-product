@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-fly -t s1p destroy-pipeline -p upgrade-buildpack -n
-fly -t s1p sp -p upgrade-buildpack -c ci/demo-upgrade-buildpack-pipeline.yml -l ci/s1p-buildpack-params.yml
+# You can use wings as well. This is my own Concourse server.  It uses github authentication.
+# Contact @msegvich to get added to the github org
+fly -t s1p login --concourse-url https://s1p.ci.pcf-labs.com --ca-cert ./s1p-ca-cert.pem
+fly -t s1p fly trigger-job -j reset-buildpack/regulator
