@@ -18,6 +18,9 @@ This concept can easily be applied for upgrading products as well such as Stemce
 ## Updating the pipeline
 You will need to reset the buildpack after upgrading in order to run the demo again.  Therefore, you'll want to change the job ``dotnet-core-buildpack`` to use ``product_version: ".NET Core 2.1.3"``.
 
+## Slides
+These [slides](https://docs.google.com/presentation/d/1j6gLb1t6uoN1tsRsOVmZsPw0sCLEXc-jLThTiseTC-I/edit#slide=id.g40fcc755db_0_355) complement the buildpack upgrade.
+
 ## PCF Foundation Info for S1P
 This is shut down at night since it runs on GCP. You will need to login.  See [google doc](https://docs.google.com/spreadsheets/d/1X48beVPXKBcTqAyDdjx2kPCOFZLfpimAxu0O270I7LQ/edit#gid=772775189) for creds.
 
@@ -40,4 +43,4 @@ Note: Depending on the tile you're upgrading, it can take a while for this to co
 
 Upgrade buildpack is based on [PCF Pipelines](https://github.com/pivotal-cf/pcf-pipelines)
 
-Upgrade tile/product pipeline is based on Rahul's [PCF Product Tile Pipelines](https://github.com/rahul-kj/pcf-concourse-pipelines) and [PCF Pipelines](https://github.com/pivotal-cf/pcf-pipelines).  I combined elements I like from each repo and created my own repo for the [pcf-pipelines](git@github.com:msegvich/pcf-tiles-pipelines.git) resource. 
+Upgrade tile/product pipeline is based on Rahul's [PCF Product Tile Pipelines](https://github.com/rahul-kj/pcf-concourse-pipelines) and [PCF Pipelines](https://github.com/pivotal-cf/pcf-pipelines).  I combined elements I like from each repo and created my own repo for the [pcf-pipelines](git@github.com:msegvich/pcf-tiles-pipelines.git) resource.
